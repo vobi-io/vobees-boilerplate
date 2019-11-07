@@ -1,0 +1,5 @@
+mutation getCypressUser($token: String!) {
+  getCypressUser(token: $token) {
+    accessToken
+  }
+}

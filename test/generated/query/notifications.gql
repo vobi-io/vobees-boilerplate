@@ -1,0 +1,16 @@
+query notifications($filter: FilterFindManyNotificationInput, $skip: Int, $limit: Int, $sort: SortFindManyNotificationInput) {
+  notifications(filter: $filter, skip: $skip, limit: $limit, sort: $sort) {
+    type
+    notifiableId
+    notifiableType
+    recieverId
+    seen
+    userId
+    creator
+    updater
+    deletedAt
+    _id
+    updatedAt
+    createdAt
+  }
+}

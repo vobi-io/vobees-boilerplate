@@ -1,0 +1,19 @@
+mutation updateUser($email: String!, $firstName: String!, $lastName: String!) {
+  updateUser(email: $email, firstName: $firstName, lastName: $lastName) {
+    email
+    firstName
+    lastName
+    locale
+    account {
+      verification {
+        verified
+        expireIn
+      }
+    }
+    isSuperAdmin
+    deletedAt
+    _id
+    updatedAt
+    createdAt
+  }
+}

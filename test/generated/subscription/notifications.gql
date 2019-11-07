@@ -1,0 +1,16 @@
+subscription notifications {
+  notifications {
+    type
+    notifiableId
+    notifiableType
+    recieverId
+    seen
+    userId
+    creator
+    updater
+    deletedAt
+    _id
+    updatedAt
+    createdAt
+  }
+}

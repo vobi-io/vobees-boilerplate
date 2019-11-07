@@ -1,0 +1,17 @@
+FROM node:10.15.2-alpine
+
+WORKDIR /app
+
+RUN apk add graphicsmagick
+RUN apk add imagemagick
+
+COPY ./package.json ./
+
+RUN npm install
+RUN npm i -S nodemon
+RUN npm run postinstall
+
+COPY . .
+
+EXPOSE 8000
+CMD [ "npm", "run", "start:docker:debug" ]

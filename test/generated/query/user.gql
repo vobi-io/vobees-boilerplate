@@ -1,0 +1,19 @@
+query user {
+  user {
+    email
+    firstName
+    lastName
+    locale
+    account {
+      verification {
+        verified
+        expireIn
+      }
+    }
+    isSuperAdmin
+    deletedAt
+    _id
+    updatedAt
+    createdAt
+  }
+}

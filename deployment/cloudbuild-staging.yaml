@@ -1,0 +1,32 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'postinstall']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: [ 'run', 'lint']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: [ 'test']
+  - name: gcr.io/cloud-builders/docker
+    args:
+      [
+        'build',
+        '-f',
+        './deployment/Dockerfile-staging',
+        '-t',
+        'gcr.io/invoicewave-123456/api-inw-staging:$BUILD_ID',
+        '.',
+      ]
+  - name: gcr.io/cloud-builders/docker
+    args: ['push', 'gcr.io/invoicewave-123456/api-inw-staging:$BUILD_ID']
+  - name: gcr.io/cloud-builders/kubectl
+    args:
+      [
+        'set',
+        'image',
+        'deployment/api-inw-staging',
+        'api-inw-staging=gcr.io/invoicewave-123456/api-inw-staging:$BUILD_ID',
+      ]
+    env:
+      - 'CLOUDSDK_COMPUTE_ZONE=europe-west3-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=inw-cluster'

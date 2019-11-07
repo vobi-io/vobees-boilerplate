@@ -1,0 +1,30 @@
+query getAllUsers($page: Int, $perPage: Int, $filter: FilterFindManyUserInput, $sort: SortFindManyUserInput) {
+  getAllUsers(page: $page, perPage: $perPage, filter: $filter, sort: $sort) {
+    count
+    items {
+      email
+      firstName
+      lastName
+      locale
+      account {
+        verification {
+          verified
+          expireIn
+        }
+      }
+      isSuperAdmin
+      deletedAt
+      _id
+      updatedAt
+      createdAt
+    }
+    pageInfo {
+      currentPage
+      perPage
+      pageCount
+      itemCount
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
