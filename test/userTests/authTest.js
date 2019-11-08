@@ -14,11 +14,6 @@ describe('Auth', () => {
       await db.UserModel.deleteOne({ email: user.updatedEmail })
       await db.UserModel.deleteOne({ email: user.superAdminEmail })
       await db.UserModel.deleteOne({ email: user.waybillEmail })
-      await db.CompanyModel.deleteOne({ userId: state.get('userId') })
-      await db.CompanyModel.deleteOne({ userId: state.get('reservedUserId') })
-      await db.CompanyModel.deleteOne({ userId: state.get('updatedUserId') })
-      await db.CompanyModel.deleteOne({ userId: state.get('superAdminUserId') })
-      await db.CompanyModel.deleteOne({ userId: state.get('waybillUserId') })
     } catch (err) {
       console.log(err)
     }

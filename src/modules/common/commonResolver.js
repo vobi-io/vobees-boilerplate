@@ -53,19 +53,6 @@ class CommonResolver extends Resolver {
       return Promise.reject(e)
     }
   }
-
-  attachFilterCreatorAndCompany (rp) {
-    try {
-      if (!rp.args.filter) {
-        rp.args.filter = {}
-      }
-
-      rp.args.filter.creator = rp.context.user._id
-      rp.args.filter.company = rp.context.company._id
-    } catch (e) {
-      return Promise.reject(e)
-    }
-  }
 }
 
 module.exports = CommonResolver
