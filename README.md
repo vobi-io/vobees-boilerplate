@@ -1,4 +1,4 @@
-## InvoiceWave
+## appDomain
 
 ## სარჩევი
   * [სამუშაო პროცესის გაიდლაინები. დეველოპმეტნის გარემო](docs/WorkingGuidlines.md)
@@ -57,7 +57,7 @@
 
 ## GrapHQL API endpoints & Interface
 
-GraphQL ინტერფესი ```https://api-dev.invoicewave.com/graphql```
+GraphQL ინტერფესი ```https://api-dev.appDomain.com/graphql```
 თითოეული მოდელის, მუტაციებს და "Query" -ს გააჩნია თავისი აღწერები თითოეული
 ფილდის დონეზე.
 იხილეთ სქრინი:
@@ -67,7 +67,7 @@ GraphQL ინტერფესი ```https://api-dev.invoicewave.com/graphql``
 ## API endpoints & Swagger Interface
 
 პლატფორმას გააჩნია როგორც GraphQL ის მხარდაჭერა ასევე REST ინტერფეისი.
-რესტის ინტერფეისის როუტები შეგიძლია იხილოთ შემდეგ მისამართზე. https://api-dev.invoicewave.com/api-docs/
+რესტის ინტერფეისის როუტები შეგიძლია იხილოთ შემდეგ მისამართზე. https://api-dev.appDomain.com/api-docs/
 ამ ეტაპზე swagger api გენერირდება ავტომატურად პროექტის ენდპოინტების მიხედვით.
 თუმცა არ არის დასრულებული დოკუმენტაცია და სვაგერის ვებ ინტერფეისიდან პარამეტრების გადაცემა ამ ეტაპზე არ მუშაობს.
 

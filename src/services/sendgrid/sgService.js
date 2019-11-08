@@ -6,7 +6,7 @@ const mailUtil = require('./mailUtils')
 
 const sendPlain = async ({
   to,
-  from = 'no-reply@invoicewave.com',
+  from = 'no-reply@appDomain.com',
   subject = 'New email from Invoice Wave',
   text
 }) => {
@@ -31,7 +31,7 @@ const send = async ({
   templateName = 'empty',
   templateData = {},
   to,
-  from = 'no-reply@invoicewave.com',
+  from = 'no-reply@appDomain.com',
   subject = 'New email from Invoice Wave'
 }) => {
   try {
@@ -49,7 +49,7 @@ const sendInvitedEmail = async user => {
     sgMail
       .send({
         to: user.email,
-        from: 'no-reply@invoicewave.com',
+        from: 'no-reply@appDomain.com',
         subject: 'New Invitation Received',
         html
       })

@@ -1,15 +1,15 @@
-# InvoiceWave
+# appDomain
 
 ## სარჩევი
-  * [Scripts](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#scripts)
-  * [Docker](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#docker)
-  * [GraphQL](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#graphql-api-endpoints--interface)
-  * [REST interface & Swagger](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#api-endpoints--swagger-interface)
-  * [Data flow](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#data-flow)
-  * [სამუშაო პროცესის გაიდლაინები. დეველოპმეტნის გარემო](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#%E1%83%A1%E1%83%90%E1%83%9B%E1%83%A3%E1%83%A8%E1%83%90%E1%83%9D-%E1%83%9E%E1%83%A0%E1%83%9D%E1%83%AA%E1%83%94%E1%83%A1%E1%83%98%E1%83%A1-%E1%83%92%E1%83%90%E1%83%98%E1%83%93%E1%83%9A%E1%83%90%E1%83%9C%E1%83%94%E1%83%91%E1%83%98-%E1%83%9B%E1%83%98%E1%83%97%E1%83%98%E1%83%97%E1%83%94%E1%83%91%E1%83%94%E1%83%91%E1%83%98)
-  * [Git flow გიტთან მუშაობის გაიდლაინი](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#git-guidlines)
-  * [CI - Continuous Integration ](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#continuous-integration)
-  * [მოდულები & არქიტექტურა](https://github.com/btomashvili/invoicewave-back/blob/develop/docs/READMEALL.md#architecture--models)
+  * [Scripts](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#scripts)
+  * [Docker](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#docker)
+  * [GraphQL](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#graphql-api-endpoints--interface)
+  * [REST interface & Swagger](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#api-endpoints--swagger-interface)
+  * [Data flow](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#data-flow)
+  * [სამუშაო პროცესის გაიდლაინები. დეველოპმეტნის გარემო](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#%E1%83%A1%E1%83%90%E1%83%9B%E1%83%A3%E1%83%A8%E1%83%90%E1%83%9D-%E1%83%9E%E1%83%A0%E1%83%9D%E1%83%AA%E1%83%94%E1%83%A1%E1%83%98%E1%83%A1-%E1%83%92%E1%83%90%E1%83%98%E1%83%93%E1%83%9A%E1%83%90%E1%83%9C%E1%83%94%E1%83%91%E1%83%98-%E1%83%9B%E1%83%98%E1%83%97%E1%83%98%E1%83%97%E1%83%94%E1%83%91%E1%83%94%E1%83%91%E1%83%98)
+  * [Git flow გიტთან მუშაობის გაიდლაინი](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#git-guidlines)
+  * [CI - Continuous Integration ](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#continuous-integration)
+  * [მოდულები & არქიტექტურა](https://github.com/btomashvili/appDomain-back/blob/develop/docs/READMEALL.md#architecture--models)
 
 
 
@@ -46,7 +46,7 @@
 
 ## GrapHQL API endpoints & Interface
 
-GraphQL ინტერფესი ```https://api-dev.invoicewave.com/graphql```
+GraphQL ინტერფესი ```https://api-dev.appDomain.com/graphql```
 თითოეული მოდელის, მუტაციებს და "Query" -ს გააჩნია თავისი აღწერები თითოეული
 ფილდის დონეზე.
 იხილეთ სქრინი:
@@ -56,7 +56,7 @@ GraphQL ინტერფესი ```https://api-dev.invoicewave.com/graphql``
 ## API endpoints & Swagger Interface
 
 პლატფორმას გააჩნია როგორც GraphQL ის მხარდაჭერა ასევე REST ინტერფეისი.
-რესტის ინტერფეისის როუტები შეგიძლია იხილოთ შემდეგ მისამართზე. https://api-dev.invoicewave.com/api-docs/
+რესტის ინტერფეისის როუტები შეგიძლია იხილოთ შემდეგ მისამართზე. https://api-dev.appDomain.com/api-docs/
 ამ ეტაპზე swagger api გენერირდება ავტომატურად პროექტის ენდპოინტების მიხედვით.
 თუმცა არ არის დასრულებული დოკუმენტაცია და სვაგერის ვებ ინტერფეისიდან პარამეტრების გადაცემა ამ ეტაპზე არ მუშაობს.
 
@@ -70,13 +70,13 @@ GraphQL ინტერფესი ```https://api-dev.invoicewave.com/graphql``
 
 # სამუშაო პროცესის გაიდლანები (მითითებები)
 
-### ბექენდი invoicewave-back
+### ბექენდი appDomain-back
 ================================
 
 ბექის გასაშვებად ვიყნებთ ```node.js v10.15.2``` ვერსიას.
 node.js ვერსიის მენეჯმენტი განისზაღვრება ```NVM (Node Version Manager)``` - ის მეშვეობით
 
-node.js ვერსიის განსზაღვრა ხდება ```.nvmrc``` ფაილში რომელიც მდებაროებს პროექტის ```invoicewave-back``` რუთ დირექტორიაში
+node.js ვერსიის განსზაღვრა ხდება ```.nvmrc``` ფაილში რომელიც მდებაროებს პროექტის ```appDomain-back``` რუთ დირექტორიაში
 
 პროექტის გასაშვებად საჭიროა თავდაპირევლად დავაყენოთ NVM
 

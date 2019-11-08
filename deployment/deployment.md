@@ -1,5 +1,5 @@
 1. https://console.cloud.google.com/kubernetes/list?project=vobi-231607
- gcloud container clusters get-credentials inw-cluster --zone europe-west3-a --project invoicewave-123456
+ gcloud container clusters get-credentials inw-cluster --zone europe-west3-a --project appDomain-123456
 
 #### Develop
 kubectl apply -f ./deployment/deployment-dev.yaml
@@ -48,11 +48,11 @@ kubectl describe pod
 #front
 
 ბაკეტის ფაბლიკ წვდომის მიცემა
-gsutil defacl ch -u AllUsers:R gs://landing.invoicewave.ge
-gsutil defacl ch -u AllUsers:R gs://invoicewave-files
-gsutil defacl ch -u AllUsers:R gs://invoicewave.ge
+gsutil defacl ch -u AllUsers:R gs://landing.appDomain.ge
+gsutil defacl ch -u AllUsers:R gs://appDomain-files
+gsutil defacl ch -u AllUsers:R gs://appDomain.ge
 gsutil defacl ch -u AllUsers:R gs://finvoice.ge
-gsutil defacl ch -u AllUsers:R gs://staging.invoicewave.ge
+gsutil defacl ch -u AllUsers:R gs://staging.appDomain.ge
 
 
 
@@ -99,7 +99,7 @@ gcloud compute addresses create web-static-ip --global
 
 ### Generate service account for cloud build
 
- gcloud container clusters get-credentials inw-cluster --zone europe-west3-a --project invoicewave-123456
+ gcloud container clusters get-credentials inw-cluster --zone europe-west3-a --project appDomain-123456
 
 PROJECT="$(gcloud projects describe \
     $(gcloud config get-value core/project -q) --format='get(projectNumber)')"
@@ -107,7 +107,7 @@ gcloud projects add-iam-policy-binding $PROJECT --member=serviceAccount:$PROJECT
 
 #### gcloud set project
 
-gcloud config set project invoicewave-123456
+gcloud config set project appDomain-123456
 
 
 https://medium.com/google-cloud/setting-up-google-cloud-with-kubernetes-nginx-ingress-and-lets-encrypt-certmanager-bf134b7e406e

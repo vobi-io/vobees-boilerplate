@@ -14,18 +14,18 @@ steps:
         '-f',
         './deployment/Dockerfile-prod',
         '-t',
-        'gcr.io/invoicewave-123456/api-inw-prod:$BUILD_ID',
+        'gcr.io/appDomain-123456/api-inw-prod:$BUILD_ID',
         '.',
       ]
   - name: gcr.io/cloud-builders/docker
-    args: ['push', 'gcr.io/invoicewave-123456/api-inw-prod:$BUILD_ID']
+    args: ['push', 'gcr.io/appDomain-123456/api-inw-prod:$BUILD_ID']
   - name: gcr.io/cloud-builders/kubectl
     args:
       [
         'set',
         'image',
         'deployment/api-inw-prod',
-        'api-inw-prod=gcr.io/invoicewave-123456/api-inw-prod:$BUILD_ID',
+        'api-inw-prod=gcr.io/appDomain-123456/api-inw-prod:$BUILD_ID',
       ]
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=europe-west3-a'

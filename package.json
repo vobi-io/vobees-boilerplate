@@ -1,10 +1,10 @@
 {
-  "name": "invoicewave_back",
+  "name": "appdomain_back",
   "version": "1.0.0",
-  "description": "invoicewave-Back",
+  "description": "appDomain-Back",
   "main": "bin/www",
   "scripts": {
-    "start": "cross-env NODE_ENV=development DEBUG=invoicewave CONFIG=development nodemon ./bin/www",
+    "start": "cross-env NODE_ENV=development DEBUG=appDomain CONFIG=development nodemon ./bin/www",
     "start:local": "cross-env CONFIG=development_local nodemon bin/www",
     "start:devDocker": "NODE_ENV=development node bin/www",
     "start:testing": "DEBUG=* CONFIG=testing nodemon ./bin/www",
@@ -27,18 +27,18 @@
     "rs:save-waybill": "node cli/rs/index.js rs:save-waybill",
     "ufc:service": "node cli/ufc/index.js ufc:service",
     "postinstall": "node -e \"var s=['../src','../test'],d=['node_modules/app','node_modules/test'],fs=require('fs');s.forEach(function(_,i){fs.existsSync(d[i])||fs.symlinkSync(s[i],d[i],'dir')});\"",
-    "agenda": "cross-env NODE_ENV=development DEBUG=invoicewave CONFIG=development nodemon ./worker/start.js",
+    "agenda": "cross-env NODE_ENV=development DEBUG=appDomain CONFIG=development nodemon ./worker/start.js",
     "agenda:local": "cross-env CONFIG=development_local nodemon ./worker",
     "agenda:dev": "NODE_ENV=development node ./worker/start.js",
     "test:coverage": "NODE_ENV=development_local node coverage/index.js && http-server coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/btomashvili/invoicewave-back"
+    "url": "git+https://github.com/btomashvili/appDomain-back"
   },
   "author": "Vobi.io",
   "license": "ISC",
-  "homepage": "https://github.com/btomashvili/invoicewave-back",
+  "homepage": "https://github.com/btomashvili/appDomain-back",
   "config": {
     "unsafe-perm": true
   },

@@ -14,18 +14,18 @@ steps:
         '-f',
         './deployment/Dockerfile-staging',
         '-t',
-        'gcr.io/invoicewave-123456/api-inw-staging:$BUILD_ID',
+        'gcr.io/appDomain-123456/api-inw-staging:$BUILD_ID',
         '.',
       ]
   - name: gcr.io/cloud-builders/docker
-    args: ['push', 'gcr.io/invoicewave-123456/api-inw-staging:$BUILD_ID']
+    args: ['push', 'gcr.io/appDomain-123456/api-inw-staging:$BUILD_ID']
   - name: gcr.io/cloud-builders/kubectl
     args:
       [
         'set',
         'image',
         'deployment/api-inw-staging',
-        'api-inw-staging=gcr.io/invoicewave-123456/api-inw-staging:$BUILD_ID',
+        'api-inw-staging=gcr.io/appDomain-123456/api-inw-staging:$BUILD_ID',
       ]
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=europe-west3-a'

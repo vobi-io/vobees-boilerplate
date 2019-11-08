@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-inw-staging
-        image: gcr.io/invoicewave-123456/api-inw-staging:latest
+        image: gcr.io/appDomain-123456/api-inw-staging:latest
         ports:
         - containerPort: 8000
         env:

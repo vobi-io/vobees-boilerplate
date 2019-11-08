@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-inw-dev
-        image: gcr.io/invoicewave-123456/api-inw-dev:latest
+        image: gcr.io/appDomain-123456/api-inw-dev:latest
         ports:
         - containerPort: 8000
         env:

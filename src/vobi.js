@@ -142,10 +142,10 @@ class Vobi {
       this.api.generateSwagger({
         filePath: path.resolve('./public/swagger.json'),
         info: {
-          description: 'This is Invoicewave server.  You can find out more about Swagger at [https://invoicewave.com]', // eslint-disable-line
+          description: 'This is appDomain server.  You can find out more about Swagger at [https://appDomain.com]', // eslint-disable-line
           version: '1.0.0',
-          title: 'Swagger Invoicewave',
-          termsOfService: 'https://invoicewave.com/terms/',
+          title: 'Swagger appDomain',
+          termsOfService: 'https://appDomain.com/terms/',
           contact: {
             email: 'giga@vobi.io'
           }

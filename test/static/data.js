@@ -22,7 +22,7 @@ module.exports = {
   },
 
   admin: {
-    email: 'giga@vobi.io',
+    email: '/* admin email */',
     password: '12345678',
     role: 'admin',
     invalidPassword: 'invalidPassword'

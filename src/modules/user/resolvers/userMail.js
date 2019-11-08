@@ -12,8 +12,8 @@ class UserMail extends Resolver {
       const result = await mailService.send({
         templateName: 'signUp',
         to: email,
-        from: 'no-reply@invoicewave.com',
-        subject: 'InvoiceWave - Sign up'
+        from: 'no-reply@appDomain.com',
+        subject: 'appDomain - Sign up'
       })
       return result
     } catch (err) {
@@ -29,8 +29,8 @@ class UserMail extends Resolver {
         templateName: 'resetPassword',
         templateData: { resetPasswordURL },
         to: email,
-        from: 'no-reply@invoicewave.com',
-        subject: 'InvoiceWave - Reset password'
+        from: 'no-reply@appDomain.com',
+        subject: 'appDomain - Reset password'
       })
       return result
     } catch (err) {
@@ -46,8 +46,8 @@ class UserMail extends Resolver {
         templateName: 'verify',
         templateData: { verifyURL },
         to: email,
-        from: 'no-reply@invoicewave.com',
-        subject: 'InvoiceWave - Verification'
+        from: 'no-reply@appDomain.com',
+        subject: 'appDomain - Verification'
       })
       return result
     } catch (err) {

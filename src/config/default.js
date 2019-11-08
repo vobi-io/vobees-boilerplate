@@ -40,9 +40,9 @@ module.exports = {
   smsService: {
     apiUrl: 'http://smsoffice.ge/api/v2/send',
     token: '/* sms service token /*',
-    sender: 'InvoiceWave'
+    sender: 'appDomain'
   },
   cypressTestsSecret: '/* cypress secret */',
-  cypressTestEmail: 'cypress@invoicewave.com',
+  cypressTestEmail: 'cypress@appDomain.com',
   cypressTestPassword: '/* cypress password */'
 }
