@@ -123,7 +123,6 @@ class Vobi {
           subscriptionsEndpoint: `${config.wsUrl}/subscriptions`,
           context: {
             user: request.user,
-            company: request.company,
             headers: request.headers,
             accessToken: request.accessToken,
             pubsub
@@ -179,7 +178,6 @@ class Vobi {
 
       this.api.setExpressContext(req => ({
         user: req.user,
-        company: req.company,
         headers: req.headers
       }))
       app.use(router)
