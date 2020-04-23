@@ -34,7 +34,7 @@
     "crypto-random-string": "^3.0.1",
     "express": "^4.14.1",
     "express-graphql": "^0.9.0",
-    "graphql": "^15.0.0",
+    "graphql": "^14.5.8",
     "graphql-compose": "^7.3.0",
     "graphql-compose-connection": "^6.0.3",
     "graphql-compose-mongoose": "^7.1.4",

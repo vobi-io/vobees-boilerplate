@@ -1,11 +1,8 @@
-const api = makeApi('App')
+const api = makeApi('Hello')
 
 var HelloResolver = require('./helloResolver')
 var helloResoslver = new HelloResolver()
 
-api.query('hello')
+api.query('getHello')
   .resolve(helloResoslver.getHello)
   .type('JSON')
-  .doc({
-    displayName: 'Hello world'
-  })

@@ -122,13 +122,9 @@ class Vobi {
           schema,
           graphiql: true,
           endpointURL: '/graphql',
-          subscriptionsEndpoint: 'ws://35.234.67.119/subscriptions',
+          subscriptionsEndpoint: 'ws://localhost:3000/subscriptions',
           context: {
             user: request.user,
-            company: request.company,
-            headers: request.headers,
-            accessToken: request.accessToken,
-            jwt: request.jwt,
             pubsub
           },
           customFormatErrorFn: (error) => {
