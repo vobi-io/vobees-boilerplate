@@ -35,18 +35,7 @@ module.exports = (connection, name = '') => {
   }
   connect()
 
-  const getPublicIp = async () => {
-    try {
-      const publicIp = require('public-ip')
-      const result = await publicIp.v4()
-      console.log(result, ' is Public ip')
-    } catch (error) {
-      console.log('Public IP Error: ', error)
-    }
-  }
-
   mongoose.connection.on('error', (error) => {
-    getPublicIp()
     console.log(`Could not connect to MongoDB: (${name}).`)
     console.log('ERROR =>' + error)
   })

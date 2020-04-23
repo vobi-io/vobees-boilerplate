@@ -1,1 +1,89 @@
-{}
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is server.  You can find out more about Swagger at [https://vobi.io]",
+    "version": "1.0.0",
+    "title": "Swagger",
+    "termsOfService": "https://invoice.ge/terms/",
+    "contact": {
+      "email": ""
+    }
+  },
+  "errors": {
+    "400": {
+      "description": "The request cannot be fulfilled due to bad syntax",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "401": {
+      "description": "Missing or invalid authentication token",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "403": {
+      "description": "User not authorized to perform the operation",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "404": {
+      "description": "The requested resource could not be found but may be available again in the future",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "500": {
+      "description": "Something bad happened on the server",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    }
+  },
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/get-hello": {
+      "get": {
+        "operationId": "getHello",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {}
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
