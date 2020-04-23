@@ -61,5 +61,5 @@ src/public/uploads/*
 !src/public/uploads/.gitkeep
 
 
-# /public/swagger.json
+/public/swagger.json
 
