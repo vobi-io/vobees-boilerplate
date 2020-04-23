@@ -2,7 +2,6 @@ const i18next = require('i18next')
 const middleware = require('i18next-express-middleware')
 
 const localeEN = require('app/i18next/locales/en.json')
-const localeGE = require('app/i18next/locales/ge.json')
 
 i18next.use(middleware.LanguageDetector).init({
   detection: {
@@ -16,8 +15,7 @@ i18next.use(middleware.LanguageDetector).init({
   whitelist: ['en', 'ge'],
   fallbackLng: 'en',
   resources: {
-    en: { translation: localeEN },
-    ge: { translation: localeGE }
+    en: { translation: localeEN }
   }
 })
 

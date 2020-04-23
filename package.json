@@ -1,7 +1,7 @@
 {
-  "name": "appdomain_back",
+  "name": "Vobees",
   "version": "1.0.0",
-  "description": "appDomain-Back",
+  "description": "Vobees-api",
   "main": "bin/www",
   "scripts": {
     "start": "cross-env NODE_ENV=development DEBUG=appDomain CONFIG=development nodemon ./bin/www",
@@ -10,7 +10,8 @@
     "start:prod": "NODE_ENV=production node bin/www",
     "lint": "eslint . --quiet",
     "test": "cross-env PORT=8777 NODE_ENV=testing DEBUG=INW CONFIG=testing mocha --timeout 999999 --exit ./test/index.js",
-    "test:coverage": "NODE_ENV=development_local node coverage/index.js && http-server coverage"
+    "test:coverage": "NODE_ENV=development_local node coverage/index.js && http-server coverage",
+    "postinstall": "node -e \"var s=['../src','../test'],d=['node_modules/app','node_modules/test'],fs=require('fs');s.forEach(function(_,i){fs.existsSync(d[i])||fs.symlinkSync(s[i],d[i],'dir')});\""
   },
   "repository": {
     "type": "git",
@@ -31,22 +32,24 @@
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.5",
     "crypto-random-string": "^3.0.1",
-    "helmet": "^3.21.2",
     "express": "^4.14.1",
     "express-graphql": "^0.9.0",
-    "graphql": "^14.5.8",
+    "graphql": "^15.0.0",
     "graphql-compose": "^7.3.0",
     "graphql-compose-connection": "^6.0.3",
     "graphql-compose-mongoose": "^7.1.4",
     "graphql-compose-pagination": "^6.0.3",
     "graphql-subscriptions": "^1.1.0",
+    "graphql-upload": "^10.0.0",
     "handlebars": "^4.3.3",
+    "helmet": "^3.21.2",
     "i18next": "^17.0.17",
     "i18next-express-middleware": "^1.8.2",
     "lodash": "^4.17.4",
     "mongoose": "^5.4.19",
     "ramda": "^0.26.1",
     "request": "^2.88.0",
+    "subscriptions-transport-ws": "^0.9.16",
     "swagger-ui-express": "^4.1.1",
     "validator": "^11.1.0",
     "vobi-core": "1.0.10"

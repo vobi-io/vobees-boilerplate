@@ -50,9 +50,6 @@ app.use(helmet.frameguard({ action: 'sameorigin' }))
 // Referrer-Policy
 app.use(helmet.referrerPolicy({ policy: 'same-origin' }))
 
-// no-cache
-app.use(helmet.noCache())
-
 // Strict - Transport - Security
 const sixtyDaysInSeconds = 5184000
 app.use(helmet.hsts({

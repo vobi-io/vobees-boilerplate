@@ -13,7 +13,7 @@
           "program": "${workspaceRoot}/bin/www",
           "runtimeVersion": "10.15.2",
           "env": {
-              "NODE_ENV": "development_local"
+              // "NODE_ENV": "development_local"
           }
       },
       {
