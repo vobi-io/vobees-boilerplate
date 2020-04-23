@@ -1,22 +1,3 @@
 {
-  "invoice": "Invoice",
-  "issueDate": "Create date:",
-  "dueDate": "Due date:",
-  "sender": "Sender",
-  "receiver": "Receiver",
-  "title": "Title",
-  "price": "Price",
-  "qty": "Qty.",
-  "total": "Total",
-  "letter": "Letter",
-  "vat": "VAT",
-  "subTotal": "Sub total",
-  "discount": "Discount",
-  "paid": "Paid",
-  "balance": "Debt",
-  "requisites": "Requisites:",
-  "accountNumber": "Account number",
-  "bankCode": "Bank code",
-  "ID": "ID",
-  "pay": "Pay"
+
 }

@@ -1,5 +1,0 @@
-mutation verify($token: String!) {
-  verify(token: $token) {
-    accessToken
-  }
-}
