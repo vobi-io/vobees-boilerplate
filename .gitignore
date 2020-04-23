@@ -61,6 +61,5 @@ src/public/uploads/*
 !src/public/uploads/.gitkeep
 
 
-/public/swagger.json
-*deployment/deployment-secret.yml
+# /public/swagger.json
 

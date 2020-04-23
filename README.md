@@ -1,9 +1,9 @@
-## appDomain
+## Vobees
 
 #### Scripts
-``` npm run start:local``` runs project on local db
+``` yarn start``` runs project on local db
 
-``` npm run start:devDocker``` start project with docker
+``` yarn test``` start project with docker
 
 #### Generate API documentation
 ``` npm run apidoc``` generate api documentation
