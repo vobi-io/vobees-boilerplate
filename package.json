@@ -6,7 +6,6 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development DEBUG=appDomain CONFIG=development nodemon ./bin/www",
     "start:local": "cross-env CONFIG=development_local nodemon bin/www",
-    "start:dev": "NODE_ENV=development node bin/www",
     "start:prod": "NODE_ENV=production node bin/www",
     "lint": "eslint . --quiet",
     "test": "cross-env PORT=8777 NODE_ENV=testing DEBUG=INW CONFIG=testing mocha --timeout 999999 --exit ./test/index.js",

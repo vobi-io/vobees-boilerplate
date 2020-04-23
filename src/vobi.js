@@ -33,7 +33,6 @@ class Vobi {
     this.initGraphqlTypes()
     this.initGraphql(app, server)
     this.initRouter(app)
-    // this.initSocket()
   }
 
   initResponses (app) {

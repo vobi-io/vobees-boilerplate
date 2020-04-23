@@ -1,2 +1,1 @@
-require('./userTests/authTest')
-require('./userTests/userTest')
+require('./helloTests/helloTest')
