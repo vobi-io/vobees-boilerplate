@@ -3,10 +3,6 @@
 #### Scripts
 ``` npm run start:local``` runs project on local db
 
-``` npm run start:testing``` runs project on local db with testing
-
-``` npm run socket``` runs socket server
-
 ``` npm run start:devDocker``` start project with docker
 
 #### Generate API documentation
@@ -17,12 +13,6 @@
 ##### Other commands:
 ``` npm run lint``` Eslint error check
 
-## Docker
-``` docker-compose -f docker-compose.app.yml up --build``` run only server (ვორკერის და სოკეტის გარეშე) width debugger 
-
-``` docker-compose up --build ``` run this command first time 
-
-``` docker-compose up ``` start project
 
 ## GrapHQL API endpoints & Interface
 
